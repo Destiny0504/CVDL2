@@ -81,7 +81,7 @@ def split_data(instances, seed):
     for cls_idx, cls_samples in instances.items():
         # split the dataset into train, validation and test [9965, 1246, 1246] (the size is optional)
         # If this is augmentation dataset [15038,1880,1880]
-        train, validation, test = torch.utils.data.random_split(cls_samples[0], [15038,1880,1880])
+        train, validation, test = torch.utils.data.random_split(cls_samples[0], [9965, 1246, 1246])
         train_sample += train
         validation_sample += validation
         test_sample += test

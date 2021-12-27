@@ -38,6 +38,9 @@ class Ui_MainWindow(object):
         self.pushButton_5 = QPushButton(self.groupBox_2)
         self.pushButton_5.setObjectName(u"pushButton_5")
         self.pushButton_5.setGeometry(QRect(20, 180, 181, 51))
+        self.textEdit = QLineEdit(self.groupBox_2)
+        self.textEdit.setObjectName(u"textEdit")
+        self.textEdit.setGeometry(QRect(20, 250, 181, 51))
         self.pushButton_7 = QPushButton(self.groupBox_2)
         self.pushButton_7.setObjectName(u"pushButton_7")
         self.pushButton_7.setGeometry(QRect(20, 320, 181, 51))
@@ -70,22 +73,20 @@ class My_window(QMainWindow, Ui_MainWindow):
         self.initUI()
         self.index = 1
         self.img = None
-    def Q21(self):
-        Q2.Q21()
-    def Q22(self):
-        Q2.Q22()
-    def Q23(self):
-        Q2.Q23(self.index)
-    def Q24(self):
-        Q2.Q24()
-    def Q25(self):
-        Q2.Q25()
+    def Q51(self):
+        Q5.Q51()
+    def Q52(self):
+        Q5.Q52()
+    def Q53(self):
+        Q5.Q53(int(self.textEdit.text()))
+    def Q54(self):
+        Q5.Q54()
 
     def initUI(self):
-        self.pushButton_3.clicked.connect(self.Q21)
-        self.pushButton_4.clicked.connect(self.Q22)
-        self.pushButton_5.clicked.connect(self.Q24)
-        self.pushButton_7.clicked.connect(self.Q25)
+        self.pushButton_3.clicked.connect(self.Q51)
+        self.pushButton_4.clicked.connect(self.Q52)
+        self.pushButton_5.clicked.connect(self.Q53)
+        self.pushButton_7.clicked.connect(self.Q54)
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
